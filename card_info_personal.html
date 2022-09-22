@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoDesign</title>
+    <script src="https://kit.fontawesome.com/c55325d833.js" crossorigin="anonymous"></script>
+    <style>
+        :root{
+            --color-primario:#13a8fe;
+            --color-primario-oscuro:#0371b0;
+            --color-secundario: #ff00ff;
+            --color-terciario: #ffa300;
+            --color-adicional: #cf0060;
+            --color-fondo: #000045;
+            --color-blanco: #fff;
+            --color-negro: #000;
+            --color-gris-oscuro: #414141;            
+        }
+
+        @font-face {
+            font-family: 'MuseoModerno';
+            src: url(fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf);
+        }
+        @font-face {
+            font-family: 'Codystar';
+            src: url(fonts/Codystar/Codystar-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'cube';
+            src: url(fonts/cube/Cube.ttf);
+        }
+        @font-face {
+            font-family: 'neon';
+            src: url(fonts/neon/Neon.ttf);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'MuseoModerno';
+        }
+        
+        body{
+            background: url(img/fondo_imagen4.png),  linear-gradient(0deg, var(--color-fondo) 0%,var(--color-primario-oscuro) 30%, var(--color-primario) 100%);
+            background-blend-mode: soft-light;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .card{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: fit-content;
+            background: url(img/fondo_imagen10.png), var(--color-fondo);
+            background-blend-mode: color-dodge;
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            box-shadow: 0 20px 30px rgba(255, 252, 252, 0.536);
+            border-radius: 10px;
+            text-align: center;
+            padding: 30px;
+            transition: all .5s;
+        }
+
+        .card:hover{
+            box-shadow: 0 20px 80px rgba(255, 252, 252, 0.744);
+        }
+
+        .img{
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h2{
+            font-size: 16px;
+            font-family: 'cube';
+            margin: 30px 0;
+            color: var(--color-fondo);
+            text-transform: uppercase;
+            position: relative;
+        }
+        h2::before{
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: var(--color-secundario);
+            -webkit-text-stroke: 0px var(--color-primario-oscuro);
+            border-right: 2px solid var(--color-secundario);
+            overflow: hidden;
+            animation: animate 5s linear alternate infinite;
+        }
+
+        @keyframes animate{
+            0%{
+                width: 0;
+            }
+            70%, 100%{
+                width:90%;
+            }
+        }
+
+        span{
+            font-size: 30px;
+            background: var(--color-primario);
+            color: var(--color-blanco);
+            margin: 20px 0;
+            padding: 5px 17px;
+            border-radius: 15px;
+            font-family: 'neon';
+            text-transform: inherit;
+        }
+        
+        span:hover{
+            box-shadow: 0 0px 50px var(--color-secundario);
+
+        }
+
+        p{
+            margin: 20px 0px;
+            color: var(--color-blanco);
+            font-size: 20px;
+        }
+
+        ul li{
+            list-style: none;
+            display: inline;
+            margin: 20px 0px;
+        }
+
+        ul li a{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            color: var(--color-terciario);
+            margin: 25px 10px;
+            font-size: 25px;
+            transition: all .5s;
+        }
+
+        ul li a:hover{
+            color: var(--color-adicional);
+            transform: rotateY(360deg);
+        }
+
+        @media (max-width: 768px) {
+            .card{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            span{
+                font-size: 20px;
+                padding: 5px 20px;
+            }
+
+            h2::before{
+            font-size: 12px;
+            }
+
+            h2{
+                font-size: 10px;
+                padding: 10px;
+            }
+
+            ul li a{
+                font-size: 16px;
+            }
+
+        }
+
+    </style>    
+</head>
+<body>
+    <div class="card">
+        <div class="img">
+            <img src="img/t_d.png" alt="">
+        </div>
+        <h2 data-text="TecnoDesign...">TecnoDesign...</h2><br>
+            <span>Technology & Design</span>
+        <p>
+            Somos especialistas en TI, Diseños WEB, Publicidad, Gestión de Redes Sociales, Software para PC, MAC, Android e iOS
+        </p>
+        <ul>
+            <li><a href="#" target="-blank" class="fa-brands fa-linkedin"></a></li>
+            <li><a href="#" target="-blank" class="fa-brands fa-google"></a></li>
+            <li><a href="https://www.youtube.com/channel/UC5COux2kCCr01HxIqFn-jqw" target="-blank" class="fa-brands fa-youtube"></a></li>
+            <li><a href="https://twitter.com/TecnodesignD" target="-blank" class="fa-brands fa-twitter"></a></li>
+            <li><a href="https://www.facebook.com/ivctecnodesign" target="-blank" class="fa-brands fa-facebook"></a></li>
+            <li><a href="https://www.instagram.com/ivc_tecno_design/" target="-blank" class="fa-brands fa-instagram"></a></li>
+            <li><a href="https://wa.me/message/KKJK3OARSN52O1" target="-blank" class="fa-brands fa-whatsapp"></a></li>
+            <li><a href="https://t.me/canal_tecnodesign_bot" target="-blank" class="fa-brands fa-telegram"></a></li>
+            <li style="margin: 15px 0;">
+            <span>Agradecemos tu donación</span>
+            </li>
+            <li><a href="https://paypal.me/IVCTecnoDesign?country.x=MX&locale.x=es_XC" target="-blank" class="fa-brands fa-paypal"></a></li>
+            <li><a href="https://donate.stripe.com/bIYdQQ9TH7zKgwMcMN" target="-blank" class="fa-brands fa-stripe"></a></li>
+        </ul>
+    </div>
+</body>
+</html>
