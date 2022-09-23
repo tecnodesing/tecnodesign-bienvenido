@@ -196,16 +196,6 @@
                 padding: auto;
             }
 
-            #fb-customer-chat{
-                display: block;
-                text-decoration: none;
-                text-align: center;
-                color: var(--color-terciario);
-                margin: 25px 10px;
-                font-size: 25px;
-                transition: all .5s;
-            }
-
         }
 
     </style>    
@@ -229,42 +219,12 @@
             <li><a href="https://www.instagram.com/ivc_tecno_design/" target="-blank" class="fa-brands fa-instagram"></a></li>
             <li><a href="https://wa.me/message/KKJK3OARSN52O1" target="-blank" class="fa-brands fa-whatsapp"></a></li>
             <li><a href="https://t.me/canal_tecnodesign_bot" target="-blank" class="fa-brands fa-telegram"></a></li>
+            <li><a href="https://paypal.me/IVCTecnoDesign?country.x=MX&locale.x=es_XC" target="-blank" class="fa-brands fa-paypal"></a></li>
+            <li><a href="https://donate.stripe.com/bIYdQQ9TH7zKgwMcMN" target="-blank" class="fa-brands fa-stripe"></a></li>
             <li style="margin: 15px 0;">
             <span>Agradecemos tu donación</span>
             </li>
-            <li><a href="https://paypal.me/IVCTecnoDesign?country.x=MX&locale.x=es_XC" target="-blank" class="fa-brands fa-paypal"></a></li>
-            <li><a href="https://donate.stripe.com/bIYdQQ9TH7zKgwMcMN" target="-blank" class="fa-brands fa-stripe"></a></li>
         </ul>
     </div>
-    <!-- Messenger Plugin de chat Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Plugin de chat code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "489936291093035");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v15.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
 </body>
 </html>
